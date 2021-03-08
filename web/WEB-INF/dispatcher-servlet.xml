@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- was: <?xml version="1.0" encoding="UTF-8"?> -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+
+    <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
+    <!--
+    LO PRIMERO SERA DECLARAR EL CONTROLLER CON UN ID ASOCIADO
+    -->
+    <bean class="controllers.Controller01PrimerSpring" id="controller01primerspring"/>
+    <bean class="controllers.Controller02InfoControllerView" id="controller02"/>
+    <bean class="controllers.Controller03InfoViewController" id="controller03"/>
+    <bean class="controllers.Controller04Colecciones" id="controller04"/>
+    <!--
+    MEDIANTE urlMapping LO QUE HAREMOS SERA ASOCIAR EL NOMBRE DE LA VISTA
+    //CON SU EXTENSION HTM HACIA EL ID DEL CONTROLLER
+    -->
+    <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="index.htm">indexController</prop>
+                <prop key="web01primerspring.htm">controller01primerspring</prop>
+                <prop key="web02infocontrollerview.htm">controller02</prop>
+                <prop key="web03infoviewcontroller.htm">controller03</prop>
+                <prop key="web04colecciones.htm">controller04</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+          p:prefix="/WEB-INF/jsp/"
+          p:suffix=".jsp" />
+
+    <!--
+    The index controller.
+    -->
+    <bean name="indexController"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="index" />
+
+</beans>
