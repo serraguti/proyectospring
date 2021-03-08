@@ -17,6 +17,7 @@
     <bean class="controllers.Controller02InfoControllerView" id="controller02"/>
     <bean class="controllers.Controller03InfoViewController" id="controller03"/>
     <bean class="controllers.Controller04Colecciones" id="controller04"/>
+    <bean class="controllers.Controller05TablaMultiplicar" id="controller05"/>
     <!--
     MEDIANTE urlMapping LO QUE HAREMOS SERA ASOCIAR EL NOMBRE DE LA VISTA
     //CON SU EXTENSION HTM HACIA EL ID DEL CONTROLLER
@@ -29,6 +30,7 @@
                 <prop key="web02infocontrollerview.htm">controller02</prop>
                 <prop key="web03infoviewcontroller.htm">controller03</prop>
                 <prop key="web04colecciones.htm">controller04</prop>
+                <prop key="web05tablamultiplicar.htm">controller05</prop>
             </props>
         </property>
     </bean>

@@ -21,7 +21,10 @@
             </li>
             <li>
                 <a href="web04colecciones.htm">Colecciones</a>
-            </li>            
+            </li> 
+            <li>
+                <a href="web05tablamultiplicar.htm">Tabla multiplicar</a>
+            </li>               
         </ol>
     </body>
 </html>
