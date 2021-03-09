@@ -25,6 +25,15 @@
             <li>
                 <a href="web05tablamultiplicar.htm">Tabla multiplicar</a>
             </li>               
+            <li>
+                <a href="web06departamentos.htm">Departamentos</a>
+            </li>                    
+            <li>
+                <a href="web07objetoscontainer.htm">Objetos Container</a>
+            </li>   
+            <li>
+                <a href="web08controllerdepartamentos.htm">Departamentos Container</a>
+            </li>   
         </ol>
     </body>
 </html>
