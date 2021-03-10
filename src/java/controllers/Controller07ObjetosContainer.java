@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import models.Coche;
 import models.Conductor;
+import models.Tenista;
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 import org.springframework.web.servlet.ModelAndView;
@@ -28,6 +29,8 @@ public class Controller07ObjetosContainer implements Controller {
     @Override
     public ModelAndView handleRequest(HttpServletRequest hsr, HttpServletResponse hsr1) throws Exception {
         ModelAndView mv = new ModelAndView("web07objetoscontainer");
+        Tenista tenista = (Tenista) getBean("tenista", hsr.getServletContext());
+        mv.addObject("TENISTA", tenista);
         //RECUPERAMOS EL COCHE DE FORMA EXPLICITA
         Coche car = (Coche) this.getBean("car", hsr.getServletContext());
         mv.addObject("CAR", car);

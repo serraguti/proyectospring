@@ -8,6 +8,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import models.Departamento;
+import models.Tenista;
 import org.springframework.context.ApplicationContext;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.web.context.support.WebApplicationContextUtils;
@@ -54,6 +55,8 @@ public class Controller08ContainerDepartamentos implements Controller {
     public ModelAndView handleRequest(HttpServletRequest hsr, HttpServletResponse hsr1) throws Exception {
         ModelAndView mv = new ModelAndView("web08containerdepartamentos");
         String dato = hsr.getParameter("id");
+        Tenista tenista = (Tenista) getBean("tenista", hsr.getServletContext());
+        mv.addObject("TENISTA", tenista);
         if (dato != null) {
             int id = Integer.parseInt(dato);
             Departamento dept = this.buscarDepartamento(id, hsr.getServletContext());

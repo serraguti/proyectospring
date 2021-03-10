@@ -8,6 +8,14 @@
     </head>
     <body>
         <h1>Objetos Container</h1>
+        <h1>Tenista</h1>
+        <h1 style="color:blue">
+            <c:out value="${TENISTA.nombre}"/>
+        </h1>
+        <h1 style="color:red">
+            <c:out value="${TENISTA.palmares}"/>
+        </h1>
+        <img src="${TENISTA.imagen}" style="width: 400px; height: 400px"/>        
         <h2 style="color:blue">
             <c:out value="${CAR.marca}"/> 
             <c:out value="${CAR.modelo}"/>

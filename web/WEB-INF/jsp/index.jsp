@@ -21,19 +21,25 @@
             </li>
             <li>
                 <a href="web04colecciones.htm">Colecciones</a>
-            </li> 
+            </li>
             <li>
                 <a href="web05tablamultiplicar.htm">Tabla multiplicar</a>
-            </li>               
+            </li>
             <li>
                 <a href="web06departamentos.htm">Departamentos</a>
-            </li>                    
+            </li>
             <li>
                 <a href="web07objetoscontainer.htm">Objetos Container</a>
-            </li>   
+            </li>
             <li>
                 <a href="web08controllerdepartamentos.htm">Departamentos Container</a>
-            </li>   
+            </li>
+            <li>
+                <a href="web09tenista.htm">Ejemplo Container Tenista</a>
+            </li>
+            <li>
+                <a href="web10departamentoscontainer.htm">Container Departamentos Repo</a>
+            </li> 
         </ol>
     </body>
 </html>

@@ -23,6 +23,25 @@
 
     <!-- ADD PERSISTENCE SUPPORT HERE (jpa, hibernate, etc) -->
 
+    <bean id="repositorydepartamentos" class="repositories.RepositoryDepartamentosContainer">
+        <constructor-arg ref="dataSourceOracle"/>
+    </bean>
+
+    <bean id="tenista" class="models.Tenista"
+          p:nombre="Roger Federer"
+          p:palmares="21 Grand Slams"
+          p:imagen="https://www.elespectador.com/resizer/2cp8dPQbllvlGfmBdYyVFKX5HZk=/657x0/cloudfront-us-east-1.images.arcpublishing.com/elespectador/TZSU6QCAGVE6DMQBWTXTQIO7LA.jpg"/>
+
+    <bean id="rafa" class="models.Tenista"
+          p:nombre="Rafa Nadal"
+          p:palmares="20 Grand Slams"
+          p:imagen="https://images.mediotiempo.com/cr2JaCNT9BGloMVLfILw1MosSUE=/958x596/uploads/media/2020/07/07/rafael-nadal-presente-masters-madrid.jpg"/>
+
+    <bean id="grandslam" class="models.GrandSlam"
+          p:descripcion="Wimbledon 2016">
+        <property name="tenista" ref="tenista"/>
+    </bean>
+    
     <bean id="car" class="models.Coche"
         p:marca="Lamborghini"
         p:modelo="Countach"

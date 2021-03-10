@@ -7,24 +7,16 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Departamentos Container</h1>
+        <h1>Departamentos Container Repository</h1>
         <form method="post">
             <label>Id departamento </label>
             <input type="text" name="id" required/>
             <button type="submit">Buscar departamento</button>
         </form>
-        <h1>Tenista</h1>
-        <h1 style="color:blue">
-            <c:out value="${TENISTA.nombre}"/>
-        </h1>
-        <h1 style="color:red">
-            <c:out value="${TENISTA.palmares}"/>
-        </h1>
-        <img src="${TENISTA.imagen}" style="width: 400px; height: 400px"/>        
         <hr/>
         <c:if test="${DEPARTAMENTO != null}">
             <hr/>
-            <h1 style="color:greenyellow">
+            <h1 style="color:blue">
                 <c:out value="${DEPARTAMENTO.nombre}"/>, 
                 <c:out value="${DEPARTAMENTO.localidad}"/>
             </h1>
