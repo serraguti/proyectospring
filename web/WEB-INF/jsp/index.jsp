@@ -43,6 +43,9 @@
             <li>
                 <a href="web11hospitales.htm">DI Hospitales</a>
             </li>
+            <li>
+                <a href="web12eliminarenfermos.htm">Eliminar enfermos DI</a>
+            </li>
         </ol>
     </body>
 </html>

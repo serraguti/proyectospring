@@ -29,6 +29,10 @@
 
     <!-- ADD PERSISTENCE SUPPORT HERE (jpa, hibernate, etc) -->
 
+    <bean id="repositoryenfermos" class="repositories.RepositoryEnfermos">
+        <constructor-arg ref="dataSourceMySql"/>
+    </bean>
+
     <bean id="repositoryhospital" class="repositories.RepositoryHospital">
         <constructor-arg ref="dataSourceMySql"/>
     </bean>
