@@ -21,7 +21,17 @@
     p:username="system"
     p:password="oracle" />
 
+    <bean id="dataSourceMySql"
+        class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+        p:driverClassName="com.mysql.cj.jdbc.Driver"
+        p:url="jdbc:mysql://localhost:3306/hospital"
+        p:username="root" p:password="mysql"/>
+
     <!-- ADD PERSISTENCE SUPPORT HERE (jpa, hibernate, etc) -->
+
+    <bean id="repositoryhospital" class="repositories.RepositoryHospital">
+        <constructor-arg ref="dataSourceMySql"/>
+    </bean>
 
     <bean id="repositorydepartamentos" class="repositories.RepositoryDepartamentosContainer">
         <constructor-arg ref="dataSourceOracle"/>
