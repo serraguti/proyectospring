@@ -49,6 +49,12 @@
             <li>
                 <a href="web13contadorsession.htm">Contador Session</a>
             </li>            
+            <li>
+                <a href="web14almacenarsalario.htm">Almacenar Salario session</a>
+            </li>    
+            <li>
+                <a href="web15almacenarempleados.htm">Almacenar Empleados session</a>
+            </li>            
         </ol>
     </body>
 </html>
