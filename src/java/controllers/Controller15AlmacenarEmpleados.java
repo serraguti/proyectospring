@@ -34,11 +34,18 @@ public class Controller15AlmacenarEmpleados implements Controller {
             } else {
                 listaids = new ArrayList<>();
             }
-            listaids.add(dato);
-            //ALMACENAMOS LOS DATOS DE LOS IDS EN SESSION
-            hsr.getSession().setAttribute("LISTAIDS", listaids);
-            int almacenados = listaids.size();
-            mv.addObject("ALMACENADOS", almacenados);
+            //AQUI VAMOS A PREGUNTAR SI SE HA PULSADO YA SOBRE UN EMPLEADO
+            //DE FORMA PREVIA
+            if (listaids.contains(dato)) {
+                //EXISTE EL EMPLEADO
+                mv.addObject("MENSAJE", "El empleado " + dato + " ya existe en session.");
+            } else {
+                listaids.add(dato);
+                //ALMACENAMOS LOS DATOS DE LOS IDS EN SESSION
+                hsr.getSession().setAttribute("LISTAIDS", listaids);
+                int almacenados = listaids.size();
+                mv.addObject("ALMACENADOS", almacenados);
+            }
         }
         this.repo = (RepositoryEmpleados) this.getBean("repositoryempleados",
                 hsr.getServletContext());

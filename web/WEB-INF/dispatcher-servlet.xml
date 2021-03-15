@@ -29,6 +29,13 @@
     <bean class="controllers.Controller14AlmacenarSalario" id="controller14"/>
     <bean class="controllers.Controller15AlmacenarEmpleados" id="controller15almacenar"/>
     <bean class="controllers.Controller15MostrarEmpleados" id="controller15mostrar"/>
+    <bean class="controllers.Controller16MultiAction" id="controller16">
+        <property name="methodNameResolver">
+            <bean class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">
+                <property name="paramName" value="accion"/>
+            </bean>
+        </property>        
+    </bean>
     <!--
     MEDIANTE urlMapping LO QUE HAREMOS SERA ASOCIAR EL NOMBRE DE LA VISTA
     //CON SU EXTENSION HTM HACIA EL ID DEL CONTROLLER
@@ -54,6 +61,7 @@
                 <prop key="web14mostrarsumasalarial.htm">mostrarSumaController</prop>
                 <prop key="web15almacenarempleados.htm">controller15almacenar</prop>
                 <prop key="web15mostrarempleados.htm">controller15mostrar</prop>
+                <prop key="web16multiaction.htm">controller16</prop>
             </props>
         </property>
     </bean>

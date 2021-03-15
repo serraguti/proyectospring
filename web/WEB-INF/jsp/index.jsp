@@ -54,7 +54,10 @@
             </li>    
             <li>
                 <a href="web15almacenarempleados.htm">Almacenar Empleados session</a>
-            </li>            
+            </li>
+            <li>
+                <a href="web16multiaction.htm?accion=inicio">MultiAction Controller</a>
+            </li>
         </ol>
     </body>
 </html>
