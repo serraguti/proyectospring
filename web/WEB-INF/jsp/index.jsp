@@ -58,6 +58,14 @@
             <li>
                 <a href="web16multiaction.htm?accion=inicio">MultiAction Controller</a>
             </li>
+            <li>
+                <a href="web17multiaccionesmates.htm?operacion=start">MultiAction Mates</a>
+            </li>
+            <li>
+                <a href="web18multiactionempdept.htm?accion=start">
+                    MultiAction Empleados Departamentos
+                </a>
+            </li>
         </ol>
     </body>
 </html>
