@@ -59,6 +59,7 @@
             </bean>
         </property>
     </bean>
+    <bean class="controllers.Controller20PaginarDepartamentos" id="controller20"/>
     <!--
     MEDIANTE urlMapping LO QUE HAREMOS SERA ASOCIAR EL NOMBRE DE LA VISTA
     //CON SU EXTENSION HTM HACIA EL ID DEL CONTROLLER
@@ -88,6 +89,7 @@
                 <prop key="web17multiaccionesmates.htm">controller17</prop>
                 <prop key="web18multiactionempdept.htm">controller18</prop>
                 <prop key="web19multihospitaldoctores.htm">controller19</prop>
+                <prop key="web20paginardepartamentos.htm">controller20</prop>
             </props>
         </property>
     </bean>

@@ -71,6 +71,11 @@
                     MultiAction Hospital Doctores
                 </a>
             </li>
+            <li>
+                <a href="web20paginardepartamentos.htm">
+                    Paginar Departamentos
+                </a>
+            </li>            
         </ol>
     </body>
 </html>

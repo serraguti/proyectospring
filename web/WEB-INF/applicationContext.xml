@@ -28,6 +28,10 @@
         p:username="root" p:password="mysql"/>
 
     <!-- ADD PERSISTENCE SUPPORT HERE (jpa, hibernate, etc) -->
+    <bean id="repositorypaginardepartamentos" class="repositories.RepositoryPaginarDepartamentos">
+        <constructor-arg ref="dataSourceOracle"/>
+    </bean>
+    
     <bean id="repositorymultihospitaldoctores" class="repositories.RepositoryMultiHospitalDoctores">
         <constructor-arg ref="dataSourceOracle"/>
     </bean>
