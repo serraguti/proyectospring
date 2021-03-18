@@ -7,6 +7,14 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <select>
+            <option></option>
+            <option>copy</option>
+            <option>copyIndex</option>
+            <option>priority</option>
+            <option>dependsOn</option>
+        </select>
+        <br/><br/><br/><br/><br/><br/>
         <h1>Paginar departamentos</h1>
         <dl>
             <dt>Número: <c:out value="${DEPARTAMENTO.idDepartamento}"/></dt>
